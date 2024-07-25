@@ -24,7 +24,7 @@ export const Login = () => {
                 
                     sessionStorage.setItem("token",response.data.token)
                     sessionStorage.setItem("userid",response.data.userid)
-                    navigate("/add")
+                    navigate("/create")
                 } else {
                     alert("Error in login")
                 }

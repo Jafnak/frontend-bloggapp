@@ -31,8 +31,8 @@ const Signup = () => {
                 if (response.data.status == "success") {
                     alert("Successfully registered")
                     sessionStorage.setItem("token",response.data.token)
-                    sessionStorage.setItem("userid",response.data.userid)
-                    navigate("/login")
+                    sessionStorage.setItem("userid",response.data.userId)
+                    navigate("/")
                 } else {
                     alert("Can't be registered")
                 }
