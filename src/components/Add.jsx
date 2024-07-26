@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Nav from './Nav'
 
 const Add = () => {
 
@@ -40,6 +41,7 @@ const Add = () => {
 
   return (
     <div>
+        <Nav/>
 <div className="container">
     <div className="row">
         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -49,7 +51,7 @@ const Add = () => {
                     <textarea name="Message" id="" className="form-control" value={data.Message} onChange={inputHandler}></textarea>
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button className="btn btn-success" onClick={readValue}>Post</button>
+                    <button className="btn btn-secondary" onClick={readValue}>Post</button>
                 </div>
             </div>
         </div>

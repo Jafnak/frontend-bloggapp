@@ -17,7 +17,7 @@ const Signup = () => {
     )
     
     const inputHandler=(event)=>{
-        setData({...data,[event.target.name]:event.target.value},[])
+        setData({...data,[event.target.name]:event.target.value})
     }
     
     const readValue=()=>{
@@ -27,11 +27,11 @@ const Signup = () => {
             console.log(data)
         axios.post("http://localhost:8080/signUp",data).then(
             (response)=>{
-                console.log(response.data)
+                console.log(data)
                 if (response.data.status == "success") {
                     alert("Successfully registered")
                     sessionStorage.setItem("token",response.data.token)
-                    sessionStorage.setItem("userid",response.data.userId)
+                    sessionStorage.setItem("userId",response.data.userId)
                     navigate("/")
                 } else {
                     alert("Can't be registered")
@@ -81,7 +81,7 @@ const Signup = () => {
                         
                         
                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <button className="btn btn-success" onClick={readValue}>Register</button>
+                            <button className="btn btn-secondary" onClick={readValue}>Register</button>
                            <Link class="nav-link" to="/">LOGIN</Link> 
                            </div>
                         

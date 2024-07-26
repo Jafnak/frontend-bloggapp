@@ -23,7 +23,7 @@ export const Login = () => {
                 if (response.data.status=="success") {
                 
                     sessionStorage.setItem("token",response.data.token)
-                    sessionStorage.setItem("userid",response.data.userid)
+                    sessionStorage.setItem("userId",response.data.userId)
                     navigate("/create")
                 } else {
                     alert("Error in login")
@@ -52,7 +52,7 @@ export const Login = () => {
                             <input type="password" name="password" id="" className="form-control" value={data.password} onChange={inputHandler} />
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <button className="btn btn-success" onClick={readValue}>Login</button>
+                            <button className="btn btn-secondary" onClick={readValue}>Login</button>
                         </div>
                         <Link class="nav-link" to="/signup">SIGNUP</Link>
                     </div>
